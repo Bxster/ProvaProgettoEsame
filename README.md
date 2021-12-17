@@ -18,10 +18,11 @@ L' utente, grazie al Client (ad esempio Postman), può accedere alle funzionalit
 
 **Tipo** | **Rotta** | **Descrizione**
 --|:--:|--
-GET | /userInfo | Restituisce le informazioni principali dell'utente e si può richiedere un parametro
-GET | /filter | Permette di inserire anno, mese o giorno per visualizzare gli album pubblicati
+`GET` | `/userInfo` | Restituisce le informazioni principali dell'utente e si può richiedere un parametro
+`GET` | `/filter` | Permette di inserire anno, mese o giorno per visualizzare gli album pubblicati
 
-### Parametri
+
+>### Parametri
 
 Nelle rotte possono essere inseriti dei parametri per avere delle richieste specifiche sull'utente
 
