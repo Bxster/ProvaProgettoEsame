@@ -8,7 +8,6 @@ L' applicazione SpringBoot permette, tramite l'API di Facebbok, di avere informa
 
 The SpringBoot application allows, through the Facebbok API, to have information about a user, like his name, his id or his e-mail and allows you to have statistics about the albums published by the user, viewing them based on the year, month or day of publication. Thanks to a Client, such as [Postman](https://www.postman.com), you can access the functions of this application using the various routes made available.
 
-L' utente, grazie al Client (ad esempio Postman), può accedere alle funzionalità dell'applicazione grazie al Web Service Tomcat integrato nel Framework Spring.
 
 ## Plus del programma :heavy_plus_sign:
 
@@ -16,13 +15,17 @@ L' utente, grazie al Client (ad esempio Postman), può accedere alle funzionalit
 
 # Rotte dell'Applicazione :airplane:
 
+>Le richieste che l'utente può effettuare tramite Postman devono essere all'indirizzo
+
+>[localhost:8080](http://localhost:8080)
+
 **Tipo** | **Rotta** | **Descrizione**
 --|:--:|--
-`GET` | `/userInfo` | Restituisce le informazioni principali dell'utente e si può richiedere un parametro
-`GET` | `/filter` | Permette di inserire anno, mese o giorno per visualizzare gli album pubblicati
+`GET` | `/userInfo` | Restituisce le informazioni principali dell'utente, poi si può anche inserire il nome di un parametro per ottenre un'informazione in particolare; se non viene inserito niente ritornerà il sesso dell'utente
+`GET` | `/filter` | Permette di inserire anno, mese o giorno per visualizzare quali album sono stati inseriti in quel lasso di tempo, facendo quindi statistiche
 
 
->### Parametri
+### Parametri
 
 Nelle rotte possono essere inseriti dei parametri per avere delle richieste specifiche sull'utente
 
