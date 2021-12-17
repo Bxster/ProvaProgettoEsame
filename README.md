@@ -55,9 +55,15 @@ La seconda rotta restituisce un JSONObject contenente l'array degli album trovat
 
 # Eccezioni ❌
 
+elenco delle eccezioni personalizzate e non
+
 # Test JUNIT ⚠️
 
+elenco dei test del programma oppure screenshot 
+
 # Struttura del Progetto :office:
+
+screenshot della struttura
 
 # Documentazione 📰
 Tutta la documentazione del codice java è integrato al programma tramite Javadoc (trasformare questa parola in un link che apre la cartella Doc del programma)
