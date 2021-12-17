@@ -53,6 +53,15 @@ La seconda rotta restituisce un JSONObject contenente l'array degli album trovat
 
 ![Schermata 2021-12-17 alle 23 33 13](https://user-images.githubusercontent.com/92955826/146615609-16c7dadf-d610-4014-a294-f3f700af0595.jpg)
 
+# Eccezioni ❌
+
+# Test JUNIT ⚠️
+
+# Struttura del Progetto :office:
+
+# Documentazione 📰
+Tutta la documentazione del codice java è integrato al programma tramite Javadoc (trasformare questa parola in un link che apre la cartella Doc del programma)
+
 # Autori del progetto :it: :smile:
 
 Nome | Contributo
