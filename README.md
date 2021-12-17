@@ -15,9 +15,9 @@ The SpringBoot application allows, through the Facebbok API, to have information
 
 # Rotte dell'Applicazione :airplane:
 
->Le richieste che l'utente può effettuare tramite Postman devono essere all'indirizzo
+>Le richieste che l'utente può effettuare tramite Postman devono essere all'indirizzo [localhost:8080](http://localhost:8080) 
 
->[localhost:8080](http://localhost:8080)
+>Facendo attenzione che la porta non sia già occupata dal un'altra applicazione
 
 **Tipo** | **Rotta** | **Descrizione**
 --|:--:|--
@@ -27,14 +27,28 @@ The SpringBoot application allows, through the Facebbok API, to have information
 
 ### Parametri
 
-Nelle rotte possono essere inseriti dei parametri per avere delle richieste specifiche sull'utente
+Nelle rotte possono essere inseriti dei parametri per avere delle richieste specifiche sull'utente; questi parametri sono quelli ceh possono essere chiamati tramite [Facebook for developers](https://developers.facebook.com). Se viene insierito un parametro diverso o sbagliato, con un tipo non consono al parametro, verrà visualizzato un errore.
 
-## Autori del progetto :it: :smile:
+## Prima Rotta: /userInfo
+La prima rotta restituisce un JSONObject, cioè l'elenco degli attrivuti basici dell'utente. C'è poi la possibilità di inserire un parametro (`param`) per ottnere un'informazione aggiuntiva riguardo l'utente, che di default è la lista degli album tramite un Array. Se viene inserito il nome di un parametro o il valore in modo incorretto verrà segnalato tramite degli errori. Ecco un esempio di chiamata senza il passaggio di nessun parametro e invece poi con il passaggio del parametro `birthday`
 
-**NOME** | **CONTRIBUTO**
--- | --:
-[Gianluca Baldelli](https://github.com/Bxster) | 50%
-[Luca Bellante](https://github.com/lucabellantee) | 50%
+>Senza il passaggio del parametro
 
+![Schermata 2021-12-17 alle 23 15 39](https://user-images.githubusercontent.com/92955826/146614167-b6499538-ef23-4d6c-8c94-6477a747d4e2.jpg)
+![Schermata 2021-12-17 alle 23 15 56](https://user-images.githubusercontent.com/92955826/146614176-c70eb1b4-b798-4c7a-b075-f340b776841d.jpg)
 
+>Con il passaggio del parametro `birthday`
 
+![Schermata 2021-12-17 alle 23 18 25](https://user-images.githubusercontent.com/92955826/146614393-2a32eb8e-1813-4612-bb94-90a378d53123.jpg)
+
+## Seconda Rotta: /filter
+La seconda rotta restituisce un JSONObject contenente l'array degli album trovati per quel lasso di tempo scritto nei filtri come parametro, poi viene visualizato l'Id, il nome, l'e-mail dell'utente e inoltre il conto degli album trovati. Obbligatoriamente deve essere passato almeno un paramentro, cioè `year`, dopo di che a scelta si puo inserire anche il mese(`month`) e poi il giorno(`day`); non si può inserire il giorno senza aver prima scritto il mese e l'anno, perchè senno verrebbe visualizzato a schermo un errore. Se vengono inseriti dei parametri incorretti, alterati o causali veranno visualizzati degli errori.
+
+>Con il passaggio del parametro `year`
+
+![Schermata 2021-12-17 alle 23 30 55](https://user-images.githubusercontent.com/92955826/146615522-d7132663-4083-4329-ae67-2441284f2d7e.jpg)
+![Schermata 2021-12-17 alle 23 31 15](https://user-images.githubusercontent.com/92955826/146615526-51d6e215-8cbf-44d2-b328-93e965bba076.jpg)
+
+>Con il passaggio dei parametri `year`, `month`, `day`
+
+![Schermata 2021-12-17 alle 23 33 13](https://user-images.githubusercontent.com/92955826/146615609-16c7dadf-d610-4014-a294-f3f700af0595.jpg)
