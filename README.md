@@ -1,22 +1,13 @@
-# ProvaProgettoEsame
-## parte 1
-* progetto
+# Progetto-Programmazione-Ad-Oggetti 
 
- :collision:
+### Descrizione in italiano :it:
 
-**ciao** 
-*ciao*
+La nostra applicazione permette, tramite l'API di Facebbok, di avere informazioni circa un utente, come il suo nome, il suo id o la sua e-mail e permette di avere statische riguardo gli album pubblicati dall'utente, facendo statistiche in base all'anno, al mese o al giorno di pubblicazione
 
+### Description of the project :england:
 
-> ciao
+Our application allows, through the Facebbok API, to have information about a user, such as his name, his id or his e-mail and allows you to have statistics about the albums published by the user, making statistics based on year, month or day of publication
 
-**colonna 1** | **colonna 2** | **colonna 3**
----- | ----- | ----
-rotta 1 | che fa | tipo
-rotta 2 | che fa | tipo
-
-
-[I'm an inline-style link](https://www.google.com)
 
 ## Autori del progetto :it: :smile:
 
@@ -25,12 +16,5 @@ rotta 2 | che fa | tipo
 [Gianluca Baldelli](https://github.com/Bxster) | 50%
 [Luca Bellante](https://github.com/lucabellantee) | 50%
 
-## ok1
-
-### ok2
-
-#### ok3
-
-ok4
 
 
