@@ -27,7 +27,7 @@ The SpringBoot application allows, through the Facebbok API, to have information
 
 ### Parametri
 
-Nelle rotte possono essere inseriti dei parametri per avere delle richieste specifiche sull'utente; questi parametri sono quelli ceh possono essere chiamati tramite [Facebook for developers](https://developers.facebook.com). Se viene insierito un parametro diverso o sbagliato, con un tipo non consono al parametro, verrà visualizzato un errore.
+Nelle rotte possono essere inseriti dei parametri per avere delle richieste specifiche sull'utente; questi parametri sono quelli ceh possono essere chiamati tramite [Facebook for developers](https://developers.facebook.com). Se viene insierito un parametro diverso o sbagliato, con un tipo non consono al parametro, verrà visualizzato un errore. Questi parametri si possono anche trovare sul file di testo incluso nelle cartelle "GOOD_REQUEST".
 
 ## Prima Rotta: /userInfo
 La prima rotta restituisce un JSONObject, cioè l'elenco degli attrivuti basici dell'utente. C'è poi la possibilità di inserire un parametro (`param`) per ottnere un'informazione aggiuntiva riguardo l'utente, che di default è la lista degli album tramite un Array. Se viene inserito il nome di un parametro o il valore in modo incorretto verrà segnalato tramite degli errori. Ecco un esempio di chiamata senza il passaggio di nessun parametro e invece poi con il passaggio del parametro `birthday`
@@ -59,7 +59,15 @@ elenco delle eccezioni personalizzate e non
 
 # Test JUNIT ⚠️
 
-elenco dei test del programma oppure screenshot 
+>Ecco di seguito i test che vengono eseguiti su questo programma
+
+![Schermata 2021-12-18 alle 15 29 13](https://user-images.githubusercontent.com/92955826/146645251-0fc15cdf-827c-4e77-8927-761df1f47d37.jpg)
+![Schermata 2021-12-18 alle 15 29 18](https://user-images.githubusercontent.com/92955826/146645253-a2a30346-2df8-4cd1-a66b-351ce6265e6e.jpg)
+![Schermata 2021-12-18 alle 15 29 47](https://user-images.githubusercontent.com/92955826/146645255-c49c0ca2-56fe-4db8-aeef-032d621d5807.jpg)
+![Schermata 2021-12-18 alle 15 30 03](https://user-images.githubusercontent.com/92955826/146645256-b15730c2-f858-4a62-ae75-2f0038808b83.jpg)
+![Schermata 2021-12-18 alle 15 30 12](https://user-images.githubusercontent.com/92955826/146645257-e11612d2-fe1c-4859-8775-df357a5df713.jpg)
+![Schermata 2021-12-18 alle 15 30 20](https://user-images.githubusercontent.com/92955826/146645258-daf754ab-c0a7-4074-b305-9e28d05a1aca.jpg)
+![Schermata 2021-12-18 alle 15 35 13](https://user-images.githubusercontent.com/92955826/146645259-8069ae73-5919-4f16-b9e1-5eb3c2beafab.jpg)
 
 # Struttura del Progetto :office:
 
@@ -74,3 +82,4 @@ Nome | Contributo
 -- | :--:
 [Baldelli Gianluca](https://github.com/Bxster) | 50%
 [Bellante Luca](https://github.com/lucabellantee) | 50%
+
