@@ -23,6 +23,8 @@ The SpringBoot application allows, through the Facebbok API, to have information
 --|:--:|--
 `GET` | `/userInfo` | Restituisce le informazioni principali dell'utente, poi si può anche inserire il nome di un parametro per ottenre un'informazione in particolare; se non viene inserito niente ritornerà il sesso dell'utente
 `GET` | `/filter` | Permette di inserire anno, mese o giorno per visualizzare quali album sono stati inseriti in quel lasso di tempo, facendo quindi statistiche
+`GET` | `/filter/name` | Permette di inserire il nome di un album; se è presente nell'account allora verranno stampate a chermo le sue caratteristiche insieme a quelle dell'utente
+`GET` | `/filter/volgar-word` | Tramite un file di testo chiamato "VOLGAR_NAME" è possibile inserire una lista di nomi volgari e censurabili; lanciando questa get, se l'utente ha un album con uno di questi nomi verrà segnalato a schermo
 
 
 ### Parametri
@@ -53,6 +55,23 @@ La seconda rotta restituisce un JSONObject contenente l'array degli album trovat
 
 ![Schermata 2021-12-17 alle 23 33 13](https://user-images.githubusercontent.com/92955826/146615609-16c7dadf-d610-4014-a294-f3f700af0595.jpg)
 
+## Terza Rotta: /filter/name
+
+La terza rotta restituisce, se viene trovato l'album di cui abbiamo inserito il nome tramite il parametro `name`, un JSONObject contenente le infomarzio riguardo quell'album e di seguito quelle riguardo l'utente. Nel caso non venga inserito nessun nome o il nome inserito non combaci con nessun album presente nell'account dell'utente, verranno segnalati a schermo degli errori.
+
+>Con il passaggio del parametro `name`
+
+![Schermata 2021-12-18 alle 19 26 30](https://user-images.githubusercontent.com/92955826/146652002-b8081ed3-c880-4b80-8ed2-fd9ec90f72bd.jpg)
+
+## Quarta Rotta: /filter/volgar-word
+
+La quarta rotta restituisce, se viene trovato un album con un nome volgare o censurabile segnalato nel file di testo `VOLGAR_NAME`, un JSONObject con le informazioni di quell'album e dell'utente; inoltre verrà mandato a schermo un link per segnalare la presenza di questo album alla polizia postale italiana. Nel caso non venga trovato nessun album con un nome vietato verrà segnalato a schermo un errore.
+
+>Nel file di testo è stato inserito il vocabolo `cavolo`
+
+![Schermata 2021-12-18 alle 19 33 26](https://user-images.githubusercontent.com/92955826/146652159-c4d18986-cb70-4bf6-afa2-5451bfebcfab.jpg)
+
+
 # Eccezioni ❌
 
 elenco delle eccezioni personalizzate e non
@@ -82,4 +101,5 @@ Nome | Contributo
 -- | :--:
 [Baldelli Gianluca](https://github.com/Bxster) | 50%
 [Bellante Luca](https://github.com/lucabellantee) | 50%
+
 
