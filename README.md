@@ -2,16 +2,19 @@
 
 ### Descrizione in italiano :it:
 
-L' applicazione SpringBoot permette, tramite l'API di Facebbok, di avere informazioni circa un utente, come il suo nome, il suo id o la sua e-mail e permette di avere statische riguardo gli album pubblicati dall'utente, vedendoli in base all'anno, al mese o al giorno di pubblicazione. Grazie ad un Client, come ad esempio [Postman](https://www.postman.com), si può accedere alle funzionalità di questa applicazione usando le varie rotte rese disponibili.
+L' applicazione SpringBoot permette, tramite l'API di Facebbok, di avere informazioni circa un utente, come il suo nome, il suo id o la sua e-mail e permette di avere statische riguardo gli album pubblicati dall'utente, vedendoli in base all'anno, al mese o al giorno di pubblicazione, oppure cercandoli in base al nome. Grazie ad un Client, come ad esempio [Postman](https://www.postman.com), si può accedere alle funzionalità di questa applicazione usando le varie rotte rese disponibili.
+Per far partire l'applicazione bisogna inserire il proprio Id e il proprio Access Token nel file di testo `WRITE_ME` nelle prime due righe; questi parametri si possono visualizzare attraverso il sito [Facebook for Developers](https://developers.facebook.com).
 
 ### Description of the project :england:
 
-The SpringBoot application allows, through the Facebbok API, to have information about a user, like his name, his id or his e-mail and allows you to have statistics about the albums published by the user, viewing them based on the year, month or day of publication. Thanks to a Client, such as [Postman](https://www.postman.com), you can access the functions of this application using the various routes made available.
-
+The SpringBoot application allows, through the Facebbok API, to have information about a user, such as his name, his id or his e-mail and allows you to have statistics about the albums published by the user, seeing them based on per year, month, or day of publication, or by searching for them by name. Thanks to a Client, such as [Postman] (https://www.postman.com), you can access the functions of this application using the various routes made available.
+To start the application you need to insert your Id and Access Token in the text file `WRITE_ME` in the first two lines; these parameters can be viewed on the [Facebook for Developers] site (https://developers.facebook.com).
 
 ## Plus del programma :heavy_plus_sign:
 
 :white_check_mark: Far visualizzare al programma i vari Id e Token tramite un file di testo
+:white_check_mark: Cercare gli album con il loro nome
+:white_check_mark: Cercare gli album tramite una lista di parole vietate
 
 # Rotte dell'Applicazione :airplane:
 
@@ -44,7 +47,7 @@ La prima rotta restituisce un JSONObject, cioè l'elenco degli attrivuti basici 
 ![Schermata 2021-12-17 alle 23 18 25](https://user-images.githubusercontent.com/92955826/146614393-2a32eb8e-1813-4612-bb94-90a378d53123.jpg)
 
 ## Seconda Rotta: /filter
-La seconda rotta restituisce un JSONObject contenente l'array degli album trovati per quel lasso di tempo scritto nei filtri come parametro, poi viene visualizato l'Id, il nome, l'e-mail dell'utente e inoltre il conto degli album trovati. Obbligatoriamente deve essere passato almeno un paramentro, cioè `year`, dopo di che a scelta si puo inserire anche il mese(`month`) e poi il giorno(`day`); non si può inserire il giorno senza aver prima scritto il mese e l'anno, perchè senno verrebbe visualizzato a schermo un errore. Se vengono inseriti dei parametri incorretti, alterati o causali veranno visualizzati degli errori.
+La seconda rotta restituisce un JSONObject contenente l'array degli album trovati per quel lasso di tempo scritto nei filtri come parametro, poi viene visualizato l'Id, il nome, l'e-mail dell'utente e inoltre il conto degli album trovati. Obbligatoriamente deve essere passato almeno un paramentro, cioè `year`, dopo di che a scelta si puo inserire anche il mese(`month`) e poi il giorno(`day`); non si può inserire il giorno senza aver prima scritto il mese e l'anno, perchè senno verrebbe visualizzato a schermo un errore. Se vengono inseriti dei parametri incorretti, alterati o causali veranno visualizzati degli errori. Verrà tenuto conto del numero di giorni di ogni mese per evitare di non trovare nessun album in quel giorno perché non esiste il giorno.
 
 >Con il passaggio del parametro `year`
 
