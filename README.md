@@ -10,11 +10,23 @@ Per far partire l'applicazione bisogna inserire il proprio Id e il proprio Acces
 The SpringBoot application allows, through the Facebbok API, to have information about a user, such as his name, his id or his e-mail and allows you to have statistics about the albums published by the user, seeing them based on per year, month, or day of publication, or by searching for them by name. Thanks to a Client, such as [Postman] (https://www.postman.com), you can access the functions of this application using the various routes made available.
 To start the application you need to insert your Id and Access Token in the text file `WRITE_ME` in the first two lines; these parameters can be viewed on the [Facebook for Developers] site (https://developers.facebook.com).
 
-## Plus del programma :heavy_plus_sign:
+### Plus del programma :heavy_plus_sign:
 
 :white_check_mark: Far visualizzare al programma i vari Id e Token tramite un file di testo
+
 :white_check_mark: Cercare gli album con il loro nome
+
 :white_check_mark: Cercare gli album tramite una lista di parole vietate
+
+# Contenuti 📂
+
+- [Rotte](#-rotte-dell-applicazione)
+- [Parametri]
+- [Eccezioni]
+- [Testo JUNIT]
+- [Struttura]
+- [Documentazione]
+- [Autori]
 
 # Rotte dell'Applicazione :airplane:
 
