@@ -21,12 +21,12 @@ To start the application you need to insert your Id and Access Token in the text
 # Contenuti 📂
 
 - [Rotte](#rotte-dellapplicazione-airplane)
-- [Parametri](###-parametri)
-- [Eccezioni](#-eccezioni)
-- [Testo JUNIT](#-test-junit) 
-- [Struttura](#-struttura-del-progetto)
-- [Documentazione](#-documentazione)
-- [Autori](#-autori-del-progetto)
+- [Parametri](#parametri)
+- [Eccezioni](#eccezioni-)
+- [Testo JUNIT](#test-junit-%EF%B8%8F) 
+- [Struttura](#struttura-del-progetto-office)
+- [Documentazione](#documentazione-)
+- [Autori](#autori-del-progetto-it-smile)
 
 # Rotte dell'Applicazione :airplane:
 
