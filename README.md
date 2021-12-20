@@ -132,7 +132,7 @@ Tutta la documentazione del codice java è integrato al programma tramite Javado
 Nome | Contributo
 -- | :--:
 [Baldelli Gianluca](https://github.com/Bxster) | Javadoc, ReadMe, Prova Applicazione, Segnalazione di Errori, Idee sui Modelli e Filtri
-[Bellante Luca](https://github.com/lucabellantee) | Sviuluppo Software Package, Creazione di test dell'Applicazione 
+[Bellante Luca](https://github.com/lucabellantee) | Sviluppo Software del intero programma e creazione di test dell'Applicazione 
 
 
 
