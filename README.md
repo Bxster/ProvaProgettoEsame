@@ -18,6 +18,8 @@ To start the application you need to insert your Id and Access Token in the text
 
 :white_check_mark: Cercare gli album tramite una lista di parole vietate
 
+:white_check_mark: Se la porta 8080 è occupata, verrà cambiata automaticamente dal programma
+
 # Contenuti 📂
 
 - [Rotte](#rotte-dellapplicazione-airplane)
@@ -30,36 +32,27 @@ To start the application you need to insert your Id and Access Token in the text
 
 # Rotte dell'Applicazione :airplane:
 
->Le richieste che l'utente può effettuare tramite Postman devono essere all'indirizzo [localhost:8080](http://localhost:8080) 
+>Le richieste che l'utente può effettuare tramite Postman devono essere all'indirizzo [localhost:8080](http://localhost:8080) a salire perché il nostro programma ha la funzionalità di cambiare la porta automaticamente se occupata.
 
->Facendo attenzione che la porta non sia già occupata dal un'altra applicazione
-
-**Tipo** | **Rotta** | **Descrizione**
+** N° ** | **Tipo** | **Rotta** | **Descrizione**
 --|:--:|--
-`GET` | `/userInfo` | Restituisce le informazioni principali dell'utente, poi si può anche inserire il nome di un parametro per ottenre un'informazione in particolare; se non viene inserito niente ritornerà il sesso dell'utente
-`GET` | `/filter` | Permette di inserire anno, mese o giorno per visualizzare quali album sono stati inseriti in quel lasso di tempo, facendo quindi statistiche
-`GET` | `/filter/name` | Permette di inserire il nome di un album; se è presente nell'account allora verranno stampate a chermo le sue caratteristiche insieme a quelle dell'utente
-`GET` | `/filter/volgar-word` | Tramite un file di testo chiamato "VOLGAR_NAME" è possibile inserire una lista di nomi volgari e censurabili; lanciando questa get, se l'utente ha un album con uno di questi nomi verrà segnalato a schermo
+[1]() | `GET` | `/userInfo` | Restituisce le informazioni principali dell'utente inserendo inoltre un parametro per ottenre un'informazione in particolare; i parametri accettati si possono trovare sul file di testo "GOOD_REQUEST.txt"
+[2]() | `GET` | `/filter` | Permette di inserire anno, mese o giorno per visualizzare quali album sono stati inseriti in quel lasso di tempo, facendo quindi statistiche
+[3]() | `GET` | `/filter/name` | Permette di inserire il nome di un album; se è presente nell'account allora verranno stampate a schermo le sue caratteristiche insieme a quelle dell'utente
+[4]() | `GET` | `/filter/volgar-word` | Tramite un file di testo chiamato "VOLGAR_NAME.txt" è possibile inserire una lista di nomi volgari e censurabili; lanciando questa get, se l'utente ha un album con uno di questi nomi verrà segnalato a schermo
 
 
 ### Parametri
 
-Nelle rotte possono essere inseriti dei parametri per avere delle richieste specifiche sull'utente; questi parametri sono quelli ceh possono essere chiamati tramite [Facebook for developers](https://developers.facebook.com). Se viene insierito un parametro diverso o sbagliato, con un tipo non consono al parametro, verrà visualizzato un errore. Questi parametri si possono anche trovare sul file di testo incluso nelle cartelle "GOOD_REQUEST".
+Nelle rotte possono essere inseriti dei parametri per avere delle richieste specifiche sull'utente; questi parametri sono quelli che possono essere chiamati tramite [Facebook for developers](https://developers.facebook.com). Se viene insierito un parametro diverso o sbagliato, verrà visualizzato un errore. Questi parametri si possono trovare sul file di testo incluso nelle cartelle "GOOD_REQUEST.txt".
 
 ## Prima Rotta: /userInfo
-La prima rotta restituisce un JSONObject, cioè l'elenco degli attrivuti basici dell'utente. C'è poi la possibilità di inserire un parametro (`param`) per ottnere un'informazione aggiuntiva riguardo l'utente, che di default è la lista degli album tramite un Array. Se viene inserito il nome di un parametro o il valore in modo incorretto verrà segnalato tramite degli errori. Ecco un esempio di chiamata senza il passaggio di nessun parametro e invece poi con il passaggio del parametro `birthday`
+La prima rotta restituisce un JSONObject, cioè l'elenco degli attributi dell'utente. Si deve inoltre inserire un parametro (`param`) per ottnere un'informazione aggiuntiva riguardo l'utente. Se viene inserito il nome di un parametro o il valore in modo incorretto verrà segnalato tramite degli errori. I parametri accettati sono quelli che si trovano all'interno del file di testo "GOOD_REQUEST.txt". Ecco un esempio di chiamata con il passaggio del parametro `birthday`
 
->Senza il passaggio del parametro
-
-![Schermata 2021-12-17 alle 23 15 39](https://user-images.githubusercontent.com/92955826/146614167-b6499538-ef23-4d6c-8c94-6477a747d4e2.jpg)
-![Schermata 2021-12-17 alle 23 15 56](https://user-images.githubusercontent.com/92955826/146614176-c70eb1b4-b798-4c7a-b075-f340b776841d.jpg)
-
->Con il passaggio del parametro `birthday`
-
-![Schermata 2021-12-17 alle 23 18 25](https://user-images.githubusercontent.com/92955826/146614393-2a32eb8e-1813-4612-bb94-90a378d53123.jpg)
+foto
 
 ## Seconda Rotta: /filter
-La seconda rotta restituisce un JSONObject contenente l'array degli album trovati per quel lasso di tempo scritto nei filtri come parametro, poi viene visualizato l'Id, il nome, l'e-mail dell'utente e inoltre il conto degli album trovati. Obbligatoriamente deve essere passato almeno un paramentro, cioè `year`, dopo di che a scelta si puo inserire anche il mese(`month`) e poi il giorno(`day`); non si può inserire il giorno senza aver prima scritto il mese e l'anno, perchè senno verrebbe visualizzato a schermo un errore. Se vengono inseriti dei parametri incorretti, alterati o causali veranno visualizzati degli errori. Verrà tenuto conto del numero di giorni di ogni mese per evitare di non trovare nessun album in quel giorno perché non esiste il giorno.
+La seconda rotta restituisce un JSONObject contenente l'array degli album trovati per quel lasso di tempo scritto nei filtri come parametro, poi viene visualizato l'Id, il nome, l'e-mail dell'utente e inoltre il conto degli album trovati. Obbligatoriamente deve essere passato almeno un paramentro, cioè `year`, dopo di che a scelta si può inserire anche il mese(`month`) e poi il giorno(`day`); non si può inserire il giorno senza aver prima scritto il mese e l'anno, perchè, nel caso, verrebbe visualizzato a schermo un errore. Se vengono inseriti dei parametri incorretti, alterati o causali veranno visualizzati degli errori. Verrà tenuto conto del numero di giorni di ogni mese per evitare di non trovare nessun album in quel giorno perché non esiste il giorno.
 
 >Con il passaggio del parametro `year`
 
@@ -72,7 +65,7 @@ La seconda rotta restituisce un JSONObject contenente l'array degli album trovat
 
 ## Terza Rotta: /filter/name
 
-La terza rotta restituisce, se viene trovato l'album di cui abbiamo inserito il nome tramite il parametro `name`, un JSONObject contenente le infomarzio riguardo quell'album e di seguito quelle riguardo l'utente. Nel caso non venga inserito nessun nome o il nome inserito non combaci con nessun album presente nell'account dell'utente, verranno segnalati a schermo degli errori.
+La terza rotta restituisce, se viene trovato l'album di cui abbiamo inserito il nome tramite il parametro `name`, un JSONObject contenente le infomarzioni riguardo quell'album e di seguito quelle riguardo l'utente. Nel caso non venga inserito nessun nome o il nome inserito non combaci con nessun album presente nell'account dell'utente, verranno segnalati a schermo degli errori.
 
 >Con il passaggio del parametro `name`
 
@@ -89,19 +82,22 @@ La quarta rotta restituisce, se viene trovato un album con un nome volgare o cen
 
 # Eccezioni ❌
 
-elenco delle eccezioni personalizzate e non
+Oltre alle eccezioni standard di Java sono state gestite le seguenti eccezioni personalizzate:
 
 # Test JUNIT ⚠️
 
 >Ecco di seguito i test che vengono eseguiti su questo programma
 
-![Schermata 2021-12-18 alle 15 29 13](https://user-images.githubusercontent.com/92955826/146645251-0fc15cdf-827c-4e77-8927-761df1f47d37.jpg)
-![Schermata 2021-12-18 alle 15 29 18](https://user-images.githubusercontent.com/92955826/146645253-a2a30346-2df8-4cd1-a66b-351ce6265e6e.jpg)
-![Schermata 2021-12-18 alle 15 29 47](https://user-images.githubusercontent.com/92955826/146645255-c49c0ca2-56fe-4db8-aeef-032d621d5807.jpg)
-![Schermata 2021-12-18 alle 15 30 03](https://user-images.githubusercontent.com/92955826/146645256-b15730c2-f858-4a62-ae75-2f0038808b83.jpg)
-![Schermata 2021-12-18 alle 15 30 12](https://user-images.githubusercontent.com/92955826/146645257-e11612d2-fe1c-4859-8775-df357a5df713.jpg)
-![Schermata 2021-12-18 alle 15 30 20](https://user-images.githubusercontent.com/92955826/146645258-daf754ab-c0a7-4074-b305-9e28d05a1aca.jpg)
-![Schermata 2021-12-18 alle 15 35 13](https://user-images.githubusercontent.com/92955826/146645259-8069ae73-5919-4f16-b9e1-5eb3c2beafab.jpg)
+![Schermata 2021-12-20 alle 11 14 02](https://user-images.githubusercontent.com/92955826/146751830-ef7c02dd-de81-41be-b98e-06cf225f18bf.jpg)
+![Schermata 2021-12-20 alle 11 14 10](https://user-images.githubusercontent.com/92955826/146751832-65819bd8-ff71-46b5-8234-f1bf5c208211.jpg)
+![Schermata 2021-12-20 alle 11 14 20](https://user-images.githubusercontent.com/92955826/146751837-ddd73248-49e9-4d05-a5b9-de9710a60d31.jpg)
+![Schermata 2021-12-20 alle 11 14 43](https://user-images.githubusercontent.com/92955826/146751838-53fce4bb-ecaa-4256-badc-e0a7d117384d.jpg)
+![Schermata 2021-12-20 alle 11 15 12](https://user-images.githubusercontent.com/92955826/146751840-87342830-19da-48b8-aa22-fb91843a4225.jpg)
+![Schermata 2021-12-20 alle 11 15 19](https://user-images.githubusercontent.com/92955826/146751843-f8202a41-6070-4130-ad67-0dc338024f62.jpg)
+![Schermata 2021-12-20 alle 11 15 34](https://user-images.githubusercontent.com/92955826/146751845-3d81da76-9952-4909-88f6-8927f9184877.jpg)
+![Schermata 2021-12-20 alle 11 16 10](https://user-images.githubusercontent.com/92955826/146751849-a58cb5d8-95c3-46d2-83d1-9e47449ea7d6.jpg)
+![Schermata 2021-12-20 alle 11 13 44](https://user-images.githubusercontent.com/92955826/146751827-a4879ed7-3820-4101-bf24-45ee7e04c063.jpg)
+![Schermata 2021-12-20 alle 11 16 28](https://user-images.githubusercontent.com/92955826/146751851-420b0b6c-382a-4002-9077-692ccd087f26.jpg)
 
 # Struttura del Progetto :office:
 
@@ -116,5 +112,6 @@ Nome | Contributo
 -- | :--:
 [Baldelli Gianluca](https://github.com/Bxster) | 50%
 [Bellante Luca](https://github.com/lucabellantee) | 50%
+
 
 
