@@ -12,13 +12,15 @@ To start the application you need to insert your Id and Access Token in the text
 
 ### Plus del programma :heavy_plus_sign:
 
-:white_check_mark: Far visualizzare al programma i vari Id e Token tramite un file di testo
+:white_check_mark: Inserimento di userId e userToken tramite file di testo WRITE_ME.txt
 
-:white_check_mark: Cercare gli album con il loro nome
+:white_check_mark: Controllo eccezioni lettura da file: file vuoto, file non esistente, token non corretto o scritto sulla riga sbagliata
+                   
+:white_check_mark: Ricerca albums in base al nome con controllo errori ed eccezioni
 
-:white_check_mark: Cercare gli album tramite una lista di parole vietate
-
-:white_check_mark: Cambio automatico della porta puntata se la 8080 è occupata
+:white_check_mark: Ricerca albums non conformi alla  politica di Facebook, in base ad una lista di nomi inseriti in un file di testo
+                   
+:white_check_mark: Autoconfigurazione della porta del Server Tomcat per l'avvio di SpringBoot
 
 # Contenuti 📂
 
@@ -43,7 +45,7 @@ Dopo di che si puo lanciare il progetto come SpringBoot application trmite un ID
 
 # Rotte dell'Applicazione :airplane:
 
->Le richieste che l'utente può effettuare tramite Postman devono essere all'indirizzo [localhost:8080](http://localhost:8080) a salire perché il nostro programma ha la funzionalità di cambiare la porta automaticamente se occupata.
+>Le richieste che l'utente può effettuare tramite Postman devono essere all'indirizzo [localhost:<NUMERO_PORTA>](http://localhost:<NUMERO_PORTA>) a salire perché il nostro programma ha la funzionalità di cambiare la porta automaticamente se occupata.
 
 | **N°** | **Tipo** | **Rotta** | **Descrizione** |
 |--|--|:--:|--|
