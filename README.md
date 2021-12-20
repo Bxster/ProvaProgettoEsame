@@ -35,7 +35,9 @@ To start the application you need to insert your Id and Access Token in the text
 
 Tramite il terminale del vostro pc potete clonare questa repository usando questo comando:
 
-git clone -inserire indirizzo repository- 
+```
+git clone https://github.com/lucabellantee/Progetto-programmazione-a-oggetti
+```
 
 Dopo di che si puo lanciare il progetto come SpringBoot application trmite un IDE, come [Eclipse](https://www.eclipse.org), oppure dal terminale e quando il programma sarà in esecuzione sarà possibile utilizzarlo tramite un client, come [Postman](https://www.postman.com), contattando l'indirizzo http://localhost:8080
 
@@ -58,7 +60,7 @@ Nelle rotte possono essere inseriti dei parametri per avere delle richieste spec
 ## Prima Rotta: /userInfo
 La prima rotta restituisce un JSONObject, cioè l'elenco degli attributi dell'utente. Si deve inoltre inserire un parametro (`param`) per ottnere un'informazione aggiuntiva riguardo l'utente. Se viene inserito il nome di un parametro o il valore in modo incorretto verrà segnalato tramite degli errori. I parametri accettati sono quelli che si trovano all'interno del file di testo "GOOD_REQUEST.txt". Ecco un esempio di chiamata con il passaggio del parametro `birthday`
 
-foto
+![WhatsApp Image 2021-12-20 at 12 25 32](https://user-images.githubusercontent.com/92955826/146762595-37e02f9f-42bb-4d17-8654-f749ac942cf8.jpeg)
 
 ## Seconda Rotta: /filter
 La seconda rotta restituisce un JSONObject contenente l'array degli album trovati per quel lasso di tempo scritto nei filtri come parametro, poi viene visualizato l'Id, il nome, l'e-mail dell'utente e inoltre il conto degli album trovati. Obbligatoriamente deve essere passato almeno un paramentro, cioè `year`, dopo di che a scelta si può inserire anche il mese(`month`) e poi il giorno(`day`); non si può inserire il giorno senza aver prima scritto il mese e l'anno, perchè, nel caso, verrebbe visualizzato a schermo un errore. Se vengono inseriti dei parametri incorretti, alterati o causali veranno visualizzati degli errori. Verrà tenuto conto del numero di giorni di ogni mese per evitare di non trovare nessun album in quel giorno perché non esiste il giorno.
