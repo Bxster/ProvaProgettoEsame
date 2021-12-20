@@ -22,6 +22,7 @@ To start the application you need to insert your Id and Access Token in the text
 
 # Contenuti 📂
 
+- [Configurazione](#configurazione-key)
 - [Rotte](#rotte-dellapplicazione-airplane)
 - [Parametri](#parametri)
 - [Eccezioni](#eccezioni-)
@@ -36,7 +37,7 @@ Tramite il terminale del vostro pc potete clonare questa repository usando quest
 
 git clone -inserire indirizzo repository- 
 
-Dopo di che si puo lanciare il progetto come SpringBoot application trmite un IDE, come Eclipse, oppure dal terminale e quando il programma sarà in esecuzione sarà possibile utilizzarlo tramite un client, come Postman, contattando l'indirizzo http://localhost:8080
+Dopo di che si puo lanciare il progetto come SpringBoot application trmite un IDE, come [Eclipse](https://www.eclipse.org), oppure dal terminale e quando il programma sarà in esecuzione sarà possibile utilizzarlo tramite un client, come [Postman](https://www.postman.com), contattando l'indirizzo http://localhost:8080
 
 # Rotte dell'Applicazione :airplane:
 
