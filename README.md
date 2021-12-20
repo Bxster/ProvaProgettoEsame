@@ -47,12 +47,12 @@ Dopo di che si puo lanciare il progetto come SpringBoot application trmite un ID
 
 >Le richieste che l'utente può effettuare tramite Postman devono essere all'indirizzo [localhost:<NUMERO_PORTA>](http://localhost:<NUMERO_PORTA>) a salire perché il nostro programma ha la funzionalità di cambiare la porta automaticamente se occupata.
 
-| **N°** | **Tipo** | **Rotta** | **Descrizione** |
-|--|--|:--:|--|
-| [1](#prima-rotta-userinfo) | `GET` | `/userInfo` | Restituisce le informazioni principali dell'utente inserendo inoltre un parametro per ottenre un'informazione in particolare; i parametri accettati si possono trovare sul file di testo "GOOD_REQUEST.txt" |
-| [2](#seconda-rotta-filter) | `GET` | `/filter` | Permette di inserire anno, mese o giorno per visualizzare quali album sono stati inseriti in quel lasso di tempo, facendo quindi statistiche |
-| [3](#terza-rotta-filtername) | `GET` | `/filter/name` | Permette di inserire il nome di un album; se è presente nell'account allora verranno stampate a schermo le sue caratteristiche insieme a quelle dell'utente |
-| [4](#quarta-rotta-filtervolgar-word) | `GET` | `/filter/volgar-word` | Tramite un file di testo chiamato "VOLGAR_NAME.txt" è possibile inserire una lista di nomi volgari e censurabili; lanciando questa get, se l'utente ha un album con uno di questi nomi verrà segnalato a schermo |
+**N°** | **Tipo** | **Rotta** | **Descrizione** | **Parametri**
+--|--|:--:|--|--
+[1](#prima-rotta-userinfo) | `GET` | `/userInfo` | Restituisce le informazioni principali dell'utente inserendo inoltre un parametro per ottenre un'informazione in particolare; i parametri accettati si possono trovare sul file di testo "GOOD_REQUEST.txt" | `param`
+[2](#seconda-rotta-filter) | `GET` | `/filter` | Permette di inserire anno, mese o giorno per visualizzare quali album sono stati inseriti in quel lasso di tempo, facendo quindi statistiche | `year`, `month`, `day`
+[3](#terza-rotta-filtername) | `GET` | `/filter/name` | Permette di inserire il nome di un album; se è presente nell'account allora verranno stampate a schermo le sue caratteristiche insieme a quelle dell'utente | `name`
+[4](#quarta-rotta-filtervolgar-word) | `GET` | `/filter/volgar-word` | Tramite un file di testo chiamato "VOLGAR_NAME.txt" è possibile inserire una lista di nomi volgari e censurabili; lanciando questa get, se l'utente ha un album con uno di questi nomi verrà segnalato a schermo | No Parametri
 
 
 ### Parametri
@@ -126,8 +126,9 @@ Tutta la documentazione del codice java è integrato al programma tramite Javado
 
 Nome | Contributo
 -- | :--:
-[Baldelli Gianluca](https://github.com/Bxster) | 50%
-[Bellante Luca](https://github.com/lucabellantee) | 50%
+[Baldelli Gianluca](https://github.com/Bxster) | Javadoc, ReadMe, Prova Applicazione, Segnalazione di Errori, Idee sui Modelli e Filtri
+[Bellante Luca](https://github.com/lucabellantee) | Sviuluppo Software Package, Creazione di test dell'Applicazione 
+
 
 
 
