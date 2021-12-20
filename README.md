@@ -45,7 +45,7 @@ Dopo di che si puo lanciare il progetto come SpringBoot application trmite un ID
 
 # Rotte dell'Applicazione :airplane:
 
->Le richieste che l'utente può effettuare tramite Postman devono essere all'indirizzo [localhost:<NUMERO_PORTA>](http://localhost:<NUMERO_PORTA>) a salire perché il nostro programma ha la funzionalità di cambiare la porta automaticamente se occupata.
+>Le richieste che l'utente può effettuare tramite Postman devono essere all'indirizzo 8080 a salire perché il nostro programma ha la funzionalità di cambiare la porta automaticamente se occupata fino ad arrivare alla porta 65535
 
 **N°** | **Tipo** | **Rotta** | **Descrizione** | **Parametri**
 --|--|:--:|--|--
@@ -71,6 +71,11 @@ La seconda rotta restituisce un JSONObject contenente l'array degli album trovat
 
 ![Schermata 2021-12-17 alle 23 30 55](https://user-images.githubusercontent.com/92955826/146615522-d7132663-4083-4329-ae67-2441284f2d7e.jpg)
 ![Schermata 2021-12-17 alle 23 31 15](https://user-images.githubusercontent.com/92955826/146615526-51d6e215-8cbf-44d2-b328-93e965bba076.jpg)
+
+>Con il passaggio dei parametri `year`, `month`
+
+![Schermata 2021-12-20 alle 17 20 46](https://user-images.githubusercontent.com/92955826/146799220-bb6c9c37-47b9-45d1-bde7-feb610dd3e9f.jpg)
+![Schermata 2021-12-20 alle 17 21 06](https://user-images.githubusercontent.com/92955826/146799224-ef7a6f22-0e00-4074-a04c-7db2f94bd316.jpg)
 
 >Con il passaggio dei parametri `year`, `month`, `day`
 
@@ -128,7 +133,6 @@ Nome | Contributo
 -- | :--:
 [Baldelli Gianluca](https://github.com/Bxster) | Javadoc, ReadMe, Prova Applicazione, Segnalazione di Errori, Idee sui Modelli e Filtri
 [Bellante Luca](https://github.com/lucabellantee) | Sviuluppo Software Package, Creazione di test dell'Applicazione 
-
 
 
 
