@@ -30,16 +30,24 @@ To start the application you need to insert your Id and Access Token in the text
 - [Documentazione](#documentazione-)
 - [Autori](#autori-del-progetto-it-smile)
 
+# Confiurazione :key:
+
+Tramite il terminale del vostro pc potete clonare questa repository usando questo comando:
+
+git clone -inserire indirizzo repository- 
+
+Dopo di che si puo lanciare il progetto come SpringBoot application trmite un IDE, come Eclipse, oppure dal terminale e quando il programma sarà in esecuzione sarà possibile utilizzarlo tramite un client, come Postman, contattando l'indirizzo http://localhost:8080
+
 # Rotte dell'Applicazione :airplane:
 
 >Le richieste che l'utente può effettuare tramite Postman devono essere all'indirizzo [localhost:8080](http://localhost:8080) a salire perché il nostro programma ha la funzionalità di cambiare la porta automaticamente se occupata.
 
-** N° ** | **Tipo** | **Rotta** | **Descrizione**
---|:--:|--
-[1]() | `GET` | `/userInfo` | Restituisce le informazioni principali dell'utente inserendo inoltre un parametro per ottenre un'informazione in particolare; i parametri accettati si possono trovare sul file di testo "GOOD_REQUEST.txt"
-[2]() | `GET` | `/filter` | Permette di inserire anno, mese o giorno per visualizzare quali album sono stati inseriti in quel lasso di tempo, facendo quindi statistiche
-[3]() | `GET` | `/filter/name` | Permette di inserire il nome di un album; se è presente nell'account allora verranno stampate a schermo le sue caratteristiche insieme a quelle dell'utente
-[4]() | `GET` | `/filter/volgar-word` | Tramite un file di testo chiamato "VOLGAR_NAME.txt" è possibile inserire una lista di nomi volgari e censurabili; lanciando questa get, se l'utente ha un album con uno di questi nomi verrà segnalato a schermo
+| **N°** | **Tipo** | **Rotta** | **Descrizione** |
+|--|--|:--:|--|
+| [1](#prima-rotta-userinfo) | `GET` | `/userInfo` | Restituisce le informazioni principali dell'utente inserendo inoltre un parametro per ottenre un'informazione in particolare; i parametri accettati si possono trovare sul file di testo "GOOD_REQUEST.txt" |
+| [2](#seconda-rotta-filter) | `GET` | `/filter` | Permette di inserire anno, mese o giorno per visualizzare quali album sono stati inseriti in quel lasso di tempo, facendo quindi statistiche |
+| [3](#terza-rotta-filtername) | `GET` | `/filter/name` | Permette di inserire il nome di un album; se è presente nell'account allora verranno stampate a schermo le sue caratteristiche insieme a quelle dell'utente |
+| [4](#quarta-rotta-filtervolgar-word) | `GET` | `/filter/volgar-word` | Tramite un file di testo chiamato "VOLGAR_NAME.txt" è possibile inserire una lista di nomi volgari e censurabili; lanciando questa get, se l'utente ha un album con uno di questi nomi verrà segnalato a schermo |
 
 
 ### Parametri
