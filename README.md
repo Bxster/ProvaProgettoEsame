@@ -31,7 +31,7 @@ To start the application you need to insert your Id and Access Token in the text
 - [Documentazione](#documentazione-)
 - [Autori](#autori-del-progetto-it-smile)
 
-# Confiurazione :key:
+# Configurazione :key:
 
 Tramite il terminale del vostro pc potete clonare questa repository usando questo comando:
 
