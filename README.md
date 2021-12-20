@@ -39,7 +39,7 @@ Tramite il terminale del vostro pc potete clonare questa repository usando quest
 git clone https://github.com/lucabellantee/Progetto-programmazione-a-oggetti
 ```
 
-Dopo di che si puo lanciare il progetto come SpringBoot application trmite un IDE, come [Eclipse](https://www.eclipse.org), oppure dal terminale e quando il programma sarà in esecuzione sarà possibile utilizzarlo tramite un client, come [Postman](https://www.postman.com), contattando l'indirizzo http://localhost:8080
+Dopo di che si puo lanciare il progetto come SpringBoot application trmite un IDE, come [Eclipse](https://www.eclipse.org), oppure dal terminale e quando il programma sarà in esecuzione sarà possibile utilizzarlo tramite un client, come [Postman](https://www.postman.com), contattando l'indirizzo http://localhost:8080.
 
 # Rotte dell'Applicazione :airplane:
 
@@ -94,6 +94,9 @@ La quarta rotta restituisce, se viene trovato un album con un nome volgare o cen
 # Eccezioni ❌
 
 Oltre alle eccezioni standard di Java sono state gestite le seguenti eccezioni personalizzate:
+
+-
+-
 
 # Test JUNIT ⚠️
 
