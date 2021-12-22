@@ -108,7 +108,7 @@ Oltre alle eccezioni standard di Java sono state gestite le seguenti eccezioni p
 
 # Test JUNIT ⚠️
 
->Ecco di seguito i test che vengono eseguiti su questo programma
+>Ecco di seguito i test che vengono eseguiti su questo programma e visionabili [qui](https://github.com/lucabellantee/Progetto-programmazione-a-oggetti/tree/main/social/src/test/java/univpm/social)
 
 ![Schermata 2021-12-21 alle 21 32 36](https://user-images.githubusercontent.com/92955826/146995213-afce6d8f-cf73-4d34-905a-9b0cdf2d8433.jpg)
 ![Schermata 2021-12-21 alle 21 32 58](https://user-images.githubusercontent.com/92955826/146995219-4a79f8eb-0842-4226-a653-62efebcdeb83.jpg)
