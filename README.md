@@ -43,6 +43,8 @@ git clone https://github.com/lucabellantee/Progetto-programmazione-a-oggetti
 
 Dopo di che si puo lanciare il progetto come SpringBoot application trmite un IDE, come [Eclipse](https://www.eclipse.org), oppure dal terminale e quando il programma sarà in esecuzione sarà possibile utilizzarlo tramite un client, come [Postman](https://www.postman.com), contattando l'indirizzo http://localhost:8080.
 
+Ecco di seguito un video che spiega come scaricare e far funzionare questo programma: [video](https://univpm-my.sharepoint.com/:f:/g/personal/s1097955_studenti_univpm_it/EiWEpLTDjN5Gggfbdh1pASwB4yy5ldzwG8sdd0USeR32sQ?e=ctMlSk)
+
 # Rotte dell'Applicazione :airplane:
 
 >Le richieste che l'utente può effettuare tramite Postman devono essere all'indirizzo 8080 a salire perché il nostro programma ha la funzionalità di cambiare la porta automaticamente se occupata fino ad arrivare alla porta 65535
@@ -130,7 +132,7 @@ Oltre alle eccezioni standard di Java sono state gestite le seguenti eccezioni p
 screenshot della struttura
 
 # Documentazione 📰
-Tutta la documentazione del codice java è integrato al programma tramite Javadoc (trasformare questa parola in un link che apre la cartella Doc del programma)
+Tutta la documentazione del codice java è integrato al programma tramite [Javadoc](https://github.com/lucabellantee/Progetto-programmazione-a-oggetti/tree/main/social/doc)
 
 # Autori del progetto :it: :smile:
 
