@@ -43,7 +43,7 @@ git clone https://github.com/lucabellantee/Progetto-programmazione-a-oggetti
 
 Dopo di che si puo lanciare il progetto come SpringBoot application trmite un IDE, come [Eclipse](https://www.eclipse.org), oppure dal terminale e quando il programma sarà in esecuzione sarà possibile utilizzarlo tramite un client, come [Postman](https://www.postman.com), contattando l'indirizzo http://localhost:8080.
 
-Ecco di seguito un video che spiega come scaricare e far funzionare questo programma: [video](https://univpm-my.sharepoint.com/:f:/g/personal/s1097955_studenti_univpm_it/EiWEpLTDjN5Gggfbdh1pASwB4yy5ldzwG8sdd0USeR32sQ?e=ctMlSk)
+Ecco di seguito un video che spiega come scaricare e far funzionare questo programma: [video](https://www.youtube.com/watch?v=oE9Te12F10w)
 
 # Rotte dell'Applicazione :airplane:
 
@@ -103,8 +103,43 @@ La quarta rotta restituisce, se viene trovato un album con un nome volgare o cen
 
 Oltre alle eccezioni standard di Java sono state gestite le seguenti eccezioni personalizzate:
 
--
--
+>Eccezione BadParameterException:
+
+Questa eccezione è presente in diverse classi del programma è viene lanciata se e solo sè:
+
+- Al interno della prima rotta ("/userInfo") il valore del parametro passato non coincide con uno presente al interno del file di testo "GOOD_REQUEST.txt",       in questo caso il messaggio di errore sarà il seguente:
+    
+   - 1) "ATTENZIONE VALORE PARAMETRO IMMESSO NON VALIDO! CONTROLLARE LISTA VALORI PARAMETRI: GOOD_REQUEST.txt"
+
+- I valori dei parametri passati alla seconda rotta("/filter"), ovvero sia: anno o anno/mese o anno/mese/giorno non siano ammissibili, es: year=3014    year=2021/month=15 o 2021/02/31 in questi casi viene lanciata l'eccezione personalizzata con i seguenti messaggi:
+    
+   - 1) messaggio in cui l'anno è errato(filtro per anno o anno/mese o anno/mese/giorno): "ANNO NON VALIDO ! VERIFICA LA PRESENZA DI ALTRI ERRORI NEL CODICE"
+   - 2) messaggio in cui il mese non è valido(filtro per anno/mese o anno/mese/giorno): "MESE NON VALIDO ! VERIFICA LA PRESENZA DI ALTRI ERRORI NEL CODICE"
+   - 3) messaggio in cui il giorno non è valido(filtro per anno/mese/giorno): "GIORNO NON VALIDO ! VERIFICA LA PRESENZA DI ALTRI ERRORI NEL CODICE"
+
+ATTENZIONE : Con i filtri per anno/mese o anno/mese/giorno: non è detto che l'errore commesso sia solo il mese o il giorno o l'anno, l'eccezione verrà     lanciata durante la prima anomalia riscontrata, quindi se si filtra per anno/mese o anno/mese/giorno è bene verificare se sono presenti altri errori, ovvero ulteriori valori di parametri non ammissibili.
+ 
+
+>Eccezione noAlbumsException:
+
+Questa eccezione viene lanciata nel caso in cui l'utente non abbia alcun albums nel suo profilo. Questa situazione non dovrebbe capitare poichè facebook vieta di avere un profilo senza albums, infatti devono essere sempre presenti gli albums base come le immagini di profilo e di copertina , anche se vuoti. In ogni caso questa eccezione viene lanciata se in seguito ad un controllo risulta che l'utente non abbia nemmeno un album nel suo profilo. Il messaggio è il seguente: "NON E' PRESENTE ALCUN ALBUM"
+
+ 
+>Eccezione noFileException:
+
+Questa eccezione personalizzata viene lanciata se e solo sè:
+    
+ - Al interno del file "WRITE_ME.txt" l'utente inserisce lo userToken e l'accessToken su un'unica riga, il file sarà quindi composto da un' unica riga. 
+   In questo caso il messaggio sarà: "ATTENZIONE ! TUTTE LE INFO SONO SU UN UNICA RIGA"
+   
+ - Al interno del file "WRITE_ME.txt" l'utente non inserisce l'accessToken splittato sulla seconda e terza riga. In questo caso il messaggio di errore sarà:
+   "SBAGLIATO ! DEVI INSERIRE IL TOKEN SPLITTATO NELLA SECONDA E TERZA RIGA"
+   
+ - Al interno del file "WRITE_ME.txt" l'utente inserisce l'accessToken sulla seconda riga ma senza splittarlo, il file sarà quindi composto da sole due righe
+   in questo caso l'errore sarà: "ATTENZIONE ! SPLITTA LO USER TOKEN NELLA SECONDA E TERZA RIGA"
+   
+ - Al interno del file "WRITE_ME.txt" l'accessToken splittato tra la seconda e la terza riga non è alfanumerico, in questo caso il messaggio di errore sarà
+   il seguente: "ATTENTO , PROBABILMENTE NON HAI INSERITO CORRETAMENTE LO USER TOKEN"
 
 # Test JUNIT ⚠️
 
@@ -139,6 +174,6 @@ Tutta la documentazione del codice java è integrato al programma tramite [Javad
 Nome | Contributo
 -- | :--:
 [Baldelli Gianluca](https://github.com/Bxster) | Javadoc, ReadMe, Prova Applicazione, Segnalazione di Errori, Idee sul Model
-[Bellante Luca](https://github.com/lucabellantee) | Sviluppo Software del intero programma, creazione di test dell'Applicazione e realizzazione video-tutorial 
+[Bellante Luca](https://github.com/lucabellantee) | Sviluppo Software del programma e creazione di test dell'Applicazione 
 
 
